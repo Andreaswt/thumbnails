@@ -21,6 +21,7 @@ export const env = createEnv({
       // VERCEL_URL doesn't include `https` so it cant be validated as a URL
       process.env.VERCEL ? z.string() : z.string().url(),
     ),
+    BASE_URL: z.string().url(),
     MY_AWS_ACCESS_KEY: z.string(),
     MY_AWS_SECRET_ACCESS_KEY: z.string(),
     MY_AWS_REGION: z.string(),
@@ -50,6 +51,7 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    BASE_URL: process.env.BASE_URL,
     MY_AWS_ACCESS_KEY: process.env.MY_AWS_ACCESS_KEY,
     MY_AWS_SECRET_ACCESS_KEY: process.env.MY_AWS_SECRET_ACCESS_KEY,
     MY_AWS_REGION: process.env.MY_AWS_REGION,
