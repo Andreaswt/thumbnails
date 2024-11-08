@@ -17,6 +17,9 @@ export const redirectToBillingSession = async (priceId: string) => {
   }
 
   const serverSession = await getServerSession(authOptions);
+  console.log(
+    "TEST: inside redirectToBillingSession. serverSession is " + serverSession,
+  );
 
   const user = await db.user.findUnique({
     where: {

@@ -45,7 +45,7 @@ const PricingCard = ({
       <CardFooter>
         {priceId && (
           <Button
-            onClick={async () => await redirectToBillingSession(priceId)}
+            onClick={() => redirectToBillingSession(priceId)}
             className="mt-6 w-full"
           >
             Buy now
